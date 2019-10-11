@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors')
-// const db = require('./db');
+const { Products, Reviews } = require('./db');
 
 const app = express();
 const PORT = 3002;
@@ -21,3 +21,5 @@ app.listen(PORT, () => {
 });
 
 module.exports.PORT;
+
+// API routes
