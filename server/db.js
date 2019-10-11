@@ -11,6 +11,7 @@ mongoose.connect(`mongodb://localhost:${PORT}/products`, { useNewUrlParser: true
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
+
 db.once('open', function () {
     console.log(`Database Connected!`)
 })
@@ -118,7 +119,7 @@ const productsSave = products => {
         })
 }
 
-// productsSave(jewelry.results);
-// productsSave(housewares.results);
-// productsSave(accessories.results);
-// productsSave(toys.results);
+productsSave(jewelry.results);
+productsSave(housewares.results);
+productsSave(accessories.results);
+productsSave(toys.results);
