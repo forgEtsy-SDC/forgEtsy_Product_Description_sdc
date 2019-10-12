@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 module.exports = imageSchema = new mongoose.Schema({
     listing_image_id: Number,
     listing_id: Number,

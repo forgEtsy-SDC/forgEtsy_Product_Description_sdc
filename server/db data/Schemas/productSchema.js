@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const imageSchema = require('./imageSchema');
 
 module.exports = productSchema = new mongoose.Schema({
