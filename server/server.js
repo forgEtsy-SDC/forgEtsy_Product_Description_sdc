@@ -13,13 +13,15 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/test', (req, res) => {
     console.log(req);
-    res.send('Test: successful');
+    res.send('Test: Rob is a god among men :D');
 });
+
+app.get('/api/listing/:listing_id', async (req, res) => {
+    res.send(await Products.find(req.params));
+})
 
 app.listen(PORT, () => {
     console.log(`Shits up and running on PORT:${PORT}`);
 });
 
 module.exports.PORT;
-
-// API routes

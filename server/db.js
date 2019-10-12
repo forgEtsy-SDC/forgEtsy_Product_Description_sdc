@@ -33,7 +33,6 @@ Promise.all(jsonData.reduce((acc, cur) => {
 }, []))
     .then((data) => {
         console.log('...Saved products to database...');
-
         // Create reviews
         // Data is an array with 4 category arrays in it
         return data.reduce((acc, cur) => {
@@ -61,7 +60,6 @@ Promise.all(jsonData.reduce((acc, cur) => {
     .then((reviews) => {
         Reviews.insertMany(reviews)
             .then(() => console.log('...Saved reviews to database...'))
-            .catch((err) => console.log)
     })
     .catch(err => console.log);
 
@@ -69,15 +67,3 @@ module.exports = {
     Products,
     Reviews
 };
-
-// Need from DB
-
-// Products
-    // listing_id
-    // title
-    // description
-    // price
-    // shop_id
-    // shop_name
-
-// Reviews
