@@ -10,7 +10,8 @@ const { PORT } = require('./server');
 const mongoose = require('mongoose');
 
 // Mongoose
-mongoose.connect(`mongodb://localhost:${PORT}/products`, { useNewUrlParser: true });
+// mongoose.connect(`mongodb://localhost:${PORT}/products`, { useNewUrlParser: true });
+mongoose.connect(`mongodb+srv://FluxxField:Baal11ksa@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
