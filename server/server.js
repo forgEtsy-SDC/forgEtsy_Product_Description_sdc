@@ -11,11 +11,6 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/test', (req, res) => {
-    console.log(req);
-    res.send('Test: Rob is a god among men :D');
-});
-
 app.get('/api/listing/:listing_id', async (req, res) => {
     res.send(await Products.find(req.params));
 })
