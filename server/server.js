@@ -4,7 +4,7 @@ const cors = require('cors')
 const { Products, Reviews } = require('./db');
 
 const app = express();
-const PORT = 3002;
+const port = process.env.PORT || 3002;
 
 // Middleware
 app.use(cors())
@@ -32,8 +32,8 @@ app.get('/api/listing/:listing_id', async (req, res) => {
     })
 })
 
-app.listen(PORT, () => {
-    console.log(`Shits up and running on PORT:${PORT}`);
+app.listen(port, () => {
+    console.log(`Shits up and running on port:${port}`);
 });
 
-module.exports.PORT;
+module.exports.port;

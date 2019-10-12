@@ -1,15 +1,16 @@
 {
-  "name": "reacting-to-tasks",
+  "name": "forgetsy_product_description",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "nodemon server/server.js"
+    "start": "node server/server.js",
+    "devStart": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
-  "author": "",
+  "author": "Keenan Johns",
   "license": "ISC",
   "bugs": {
     "url": "http://www.github.com"
@@ -21,11 +22,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
-    "image-downloader": "^3.5.0",
     "mongoose": "^5.7.4"
   },
   "devDependencies": {
-    "live-server": "^1.2.1",
     "nodemon": "^1.19.3",
     "path": "^0.12.7"
   }

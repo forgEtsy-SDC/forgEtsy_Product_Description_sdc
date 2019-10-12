@@ -6,11 +6,11 @@ const faker = require('faker')
 
 const productSchema = require('./db data/Schemas/productSchema');
 const reviewSchema = require('./db data/Schemas/reviewSchema');
-const { PORT } = require('./server');
+const { port } = require('./server');
 const mongoose = require('mongoose');
 
 // Mongoose
-// mongoose.connect(`mongodb://localhost:${PORT}/products`, { useNewUrlParser: true });
+// mongoose.connect(`mongodb://localhost:${port}/products`, { useNewUrlParser: true });
 mongoose.connect(`mongodb+srv://FluxxField:Baal11ksa@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
