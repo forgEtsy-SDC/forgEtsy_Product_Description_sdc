@@ -12,7 +12,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/api/listing/:listing_id', async (req, res) => {
-    res.send(await Products.find(req.params));
+    res.send(await Products.find(req.params))
+        .catch(err => console.log);
 })
 
 app.listen(PORT, () => {

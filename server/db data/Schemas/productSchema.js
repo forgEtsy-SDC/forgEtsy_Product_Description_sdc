@@ -16,6 +16,7 @@ module.exports = productSchema = new mongoose.Schema({
         shop_name: String,
         title: String,
         icon_url_fullxfull: String,
+        custom_shops_state: Number
     },
     product_options: {
         option_1: {
