@@ -9,6 +9,10 @@ const reviewSchema = require('./db data/Schemas/reviewSchema');
 const { port } = require('./server');
 const mongoose = require('mongoose');
 
+// MAKE A CONFIG FILE AND ADD USERNAME AND PASSWORD TO IT
+// THEN IMPORT THE FILE HERE
+// THEN GITIGNORE CONFIG FILE
+
 // Mongoose
 // mongoose.connect(`mongodb://localhost:${port}/products`, { useNewUrlParser: true });
 mongoose.connect(`mongodb+srv://FluxxField:Baal11ksa@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
