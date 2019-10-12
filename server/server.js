@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/api/listing/:listing_id', async (req, res) => {
     res.send(await Products.find(req.params))
+        // UPDATE with approperiate error handling
         .catch(err => console.log);
 })
 
