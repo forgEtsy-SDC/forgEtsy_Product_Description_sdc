@@ -11,7 +11,6 @@ const { port } = require('./server');
 const mongoose = require('mongoose');
 
 // Mongoose
-// mongoose.connect(`mongodb://localhost:${port}/products`, { useNewUrlParser: true });
 mongoose.connect(`mongodb+srv://${username}:${password}@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
