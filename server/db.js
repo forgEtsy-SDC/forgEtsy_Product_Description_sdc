@@ -6,20 +6,17 @@ const faker = require('faker')
 
 const productSchema = require('./db data/Schemas/productSchema');
 const reviewSchema = require('./db data/Schemas/reviewSchema');
+const { username, password } = require('../config');
 const { port } = require('./server');
 const mongoose = require('mongoose');
 
-// MAKE A CONFIG FILE AND ADD USERNAME AND PASSWORD TO IT
-// THEN IMPORT THE FILE HERE
-// THEN GITIGNORE CONFIG FILE
-
 // Mongoose
 // mongoose.connect(`mongodb://localhost:${port}/products`, { useNewUrlParser: true });
-mongoose.connect(`mongodb+srv://FluxxField:Baal11ksa@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://${username}:${password}@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-    console.log(`Database Connected!`)
+    console.log(`...Database Connected...`)
 })
 
 Products = mongoose.model('Products', productSchema);
@@ -67,6 +64,7 @@ let seedDatabase = function () {
             Reviews.insertMany(reviews)
                 .then(() => console.log('...Saved reviews to database...'))
         })
+        // Add proper error handling
         .catch(err => console.log);
 }
 
@@ -86,6 +84,5 @@ seedDatabase = seedDatabaseOnce(seedDatabase);
 seedDatabase();
 
 module.exports = {
-    Products,
-    Reviews
+    Products
 };
