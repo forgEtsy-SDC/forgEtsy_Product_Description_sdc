@@ -35,15 +35,9 @@ let seedDatabase = function () {
     }, []))
         .then((data) => {
             console.log('...Saved products to database...');
-            // Create reviews
-            // Data is an array with 4 category arrays in it
             return data.reduce((acc, cur) => {
-                // Spread acc to concat the last acc value
-                // Spread the cur to flatten the array
                 return [...acc, ...cur.reduce((acc, cur) => {
-                    // Create 4 - 6 reviews per product
                     for (let i = 0; i < ~~((Math.random() * (6 - 4)) + 4 + 1); i++) {
-                        // Add each review to acc
                         acc = [...acc, {
                             review_id: Number(`${cur.listing_id}${i}`),
                             date: faker.date.past(45),
@@ -64,7 +58,7 @@ let seedDatabase = function () {
                 .then(() => console.log('...Saved reviews to database...'))
         })
         // Add proper error handling
-        .catch(err => console.log);
+        .catch(err => console.log(err));
 }
 
 const seedDatabaseOnce = function (func) {
