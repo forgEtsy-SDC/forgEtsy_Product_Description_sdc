@@ -1,0 +1,4 @@
+module.exports = {
+    username: FILL_IN_HERE,
+    password: FILL_IN_HERE
+}

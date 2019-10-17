@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors')
-const { Products, Reviews } = require('./db');
+const { Products } = require('./db');
 
 const app = express();
 const port = process.env.PORT || 3002;
@@ -33,7 +33,7 @@ app.get('/api/listing/:listing_id', async (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Shits up and running on port:${port}`);
+    console.log(`...Server is running on port:${port}...`);
 });
 
 module.exports.port;

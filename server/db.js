@@ -6,20 +6,22 @@ const faker = require('faker')
 
 const productSchema = require('./db data/Schemas/productSchema');
 const reviewSchema = require('./db data/Schemas/reviewSchema');
-const { port } = require('./server');
-const mongoose = require('mongoose');
-
-// MAKE A CONFIG FILE AND ADD USERNAME AND PASSWORD TO IT
-// THEN IMPORT THE FILE HERE
-// THEN GITIGNORE CONFIG FILE
+const { username, password } = require('../.config/database.config');
 
 // Mongoose
-// mongoose.connect(`mongodb://localhost:${port}/products`, { useNewUrlParser: true });
-mongoose.connect(`mongodb+srv://FluxxField:Baal11ksa@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
+const mongoose = require('mongoose');
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+
+mongoose.connect(`mongodb+srv://${username}:${password}@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`);
+
 const db = mongoose.connection;
+
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-    console.log(`Database Connected!`)
+    console.log(`...Database Connected...`)
 })
 
 Products = mongoose.model('Products', productSchema);
@@ -39,15 +41,9 @@ let seedDatabase = function () {
     }, []))
         .then((data) => {
             console.log('...Saved products to database...');
-            // Create reviews
-            // Data is an array with 4 category arrays in it
             return data.reduce((acc, cur) => {
-                // Spread acc to concat the last acc value
-                // Spread the cur to flatten the array
                 return [...acc, ...cur.reduce((acc, cur) => {
-                    // Create 4 - 6 reviews per product
                     for (let i = 0; i < ~~((Math.random() * (6 - 4)) + 4 + 1); i++) {
-                        // Add each review to acc
                         acc = [...acc, {
                             review_id: Number(`${cur.listing_id}${i}`),
                             date: faker.date.past(45),
@@ -67,7 +63,8 @@ let seedDatabase = function () {
             Reviews.insertMany(reviews)
                 .then(() => console.log('...Saved reviews to database...'))
         })
-        .catch(err => console.log);
+        // Add proper error handling
+        .catch(err => console.log(err));
 }
 
 const seedDatabaseOnce = function (func) {
@@ -86,6 +83,5 @@ seedDatabase = seedDatabaseOnce(seedDatabase);
 seedDatabase();
 
 module.exports = {
-    Products,
-    Reviews
+    Products
 };
