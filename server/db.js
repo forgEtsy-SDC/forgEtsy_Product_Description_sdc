@@ -6,12 +6,16 @@ const faker = require('faker')
 
 const productSchema = require('./db data/Schemas/productSchema');
 const reviewSchema = require('./db data/Schemas/reviewSchema');
-const { username, password } = require('../config');
+const { username, password } = require('../.config/database.config');
 const { port } = require('./server');
 const mongoose = require('mongoose');
 
 // Mongoose
-mongoose.connect(`mongodb+srv://${username}:${password}@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`)
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useCreateIndex', true);
+mongoose.set('useUnifiedTopology', true);
+mongoose.connect(`mongodb+srv://${username}:${password}@products-ofyx1.mongodb.net/forgEtsy?retryWrites=true&w=majority`);
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
