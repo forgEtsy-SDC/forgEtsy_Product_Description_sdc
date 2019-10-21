@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/../dist')));
 
-app.get('/api/listing/:listing_id', async (req, res) => {
+app.get('/api/listing/:listing_id', (req, res) => {
     Products.find(req.params, (err, docs) => {
         if (docs.length === 0) {
             docs[0] = {
