@@ -1,20 +1,18 @@
-const express = require('express');
-const path = require('path');
-const cors = require('cors')
-const { Products } = require('./db');
-
-const app = express();
-const port = process.env.PORT || 3002;
+const express = require('express'),
+    path = require('path'),
+    cors = require('cors'),
+    { Products } = require('./db'),
+    app = express(),
+    port = 3002;
 
 // Middleware
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '/../dist')));
 
 app.get('/api/listing/:listing_id', async (req, res) => {
     Products.find(req.params, (err, docs) => {
-        // If a bad listing_id is sent the find returns an empty array
-        // So, I added an error object to send back to the client
         if (docs.length === 0) {
             docs[0] = {
                 type: 'Error',
@@ -35,5 +33,3 @@ app.get('/api/listing/:listing_id', async (req, res) => {
 app.listen(port, () => {
     console.log(`...Server is running on port:${port}...`);
 });
-
-module.exports.port;
