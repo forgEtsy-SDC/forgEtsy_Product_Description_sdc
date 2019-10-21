@@ -1,12 +1,11 @@
-const jewelry = require('./db data/jewelry');
-const housewares = require('./db data/housewares');
-const accessories = require('./db data/accessories');
-const toys = require('./db data/toys');
-const faker = require('faker')
-
-const productSchema = require('./db data/Schemas/productSchema');
-const reviewSchema = require('./db data/Schemas/reviewSchema');
-const { username, password } = require('../.config/database.config');
+const jewelry = require('./db data/jewelry'),
+    housewares = require('./db data/housewares'),
+    accessories = require('./db data/accessories'),
+    toys = require('./db data/toys'),
+    faker = require('faker'),
+    productSchema = require('./db data/Schemas/productSchema'),
+    reviewSchema = require('./db data/Schemas/reviewSchema'),
+    { username, password } = require('../.config/database.config');
 
 // Mongoose
 const mongoose = require('mongoose');

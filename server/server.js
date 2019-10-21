@@ -13,8 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/api/listing/:listing_id', async (req, res) => {
     Products.find(req.params, (err, docs) => {
-        // If a bad listing_id is sent the find returns an empty array
-        // So, I added an error object to send back to the client
         if (docs.length === 0) {
             docs[0] = {
                 type: 'Error',
