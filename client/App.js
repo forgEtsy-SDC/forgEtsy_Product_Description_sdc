@@ -3,26 +3,30 @@ import Style from './App.css';
 import axios from 'axios';
 import unescape from 'lodash.unescape';
 
+import BuyBox from './modules/BuyBox/BuyBox';
+import ListingOverview from './modules/ListingOverview/ListingOverview';
+import ShippingInfo from './modules/ShippingInfo/ShippingInfo';
+import SellerInfo from './modules/SellerInfo/SellerInfo';
+
 class App extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            listing_id: 173033626,
+            listing_id: 695893902,
             title: '',
             price: '',
             description: '',
             shopName: '',
             shopIconURL: '',
-            custom_shops_state: ''
+            shopStars: '',
+            productOptions: []
         }
     }
 
     componentDidMount() {
         axios.get(`http://ec2-18-224-213-224.us-east-2.compute.amazonaws.com/api/listing/${this.state.listing_id}`)
             .then(({ data }) => {
-                console.log(data);
-
                 if (data.type !== 'Error') {
                     this.setState({
                         title: unescape(data.title),
@@ -30,7 +34,8 @@ class App extends Component {
                         description: unescape(data.description),
                         shopName: unescape(data.Shop.shop_name),
                         shopIconURL: data.Shop.icon_url_fullxfull,
-                        custom_shops_state: data.Shop.custom_shops_state
+                        shopStars: data.Shop.custom_shops_state,
+                        productOptions: data.product_options
                     })
                 }
             })
@@ -41,12 +46,23 @@ class App extends Component {
     render() {
         return (
             <div>
-                <div id='data-buy-box'></div>
+                <BuyBox
+                    title={this.state.title}
+                    price={this.state.price}
+                    shopName={this.state.shopName}
+                    shopStars={this.state.shopStars}
+                    productOptions={this.state.productOptions}
+                />
                 <hr></hr>
-                <div id='listing-overview'></div>
+                <ListingOverview
+                    description={this.state.description}
+                />
                 <hr></hr>
-                <div id='shipping-info'></div>
-                <div id='seller-info'></div>
+                <ShippingInfo />
+                <SellerInfo
+                    shopName={this.state.shopName}
+                    shopIconURL={this.state.shopIconURL}
+                />
             </div>
         );
     }

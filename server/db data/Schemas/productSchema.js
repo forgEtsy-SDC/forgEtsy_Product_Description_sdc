@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const imageSchema = require('./imageSchema');
+const optionsSchema = require('./optionsSchma');
 
 module.exports = productSchema = new mongoose.Schema({
     listing_id: {
@@ -18,27 +19,5 @@ module.exports = productSchema = new mongoose.Schema({
         icon_url_fullxfull: String,
         custom_shops_state: Number
     },
-    product_options: {
-        option_1: {
-            title: String,
-            description_1: String,
-            description_2: String,
-            description_3: String,
-            description_4: String,
-        },
-        option_2: {
-            title: String,
-            description_1: String,
-            description_2: String,
-            description_3: String,
-            description_4: String,
-        },
-        option_3: {
-            title: String,
-            description_1: String,
-            description_2: String,
-            description_3: String,
-            description_4: String,
-        },
-    },
+    product_options: [optionsSchema],
 });
