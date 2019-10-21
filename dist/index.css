@@ -1,1 +1,60 @@
-/* max-width: 1272px, min-width: 972px */
+#header {
+    min-width: 1024px;
+    min-height: 132px;
+    border: 1px solid red;
+}
+
+#container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "leftSide root";
+}
+
+#leftSide {
+    grid-area: leftSide;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+        "pictures"
+        "reviews";
+    border: 1px solid red;
+}
+
+#pictures {
+    grid-area: pictures;
+    min-width: 594px;
+    min-height: 412px;
+    border: 1px solid red;
+}
+
+#reviews {
+    grid-area: reviews;
+    min-width: 558px;
+    min-height: 1607px;
+    border: 1px solid red;
+}
+
+#root {
+    grid-area: root;
+    min-width: 282px;
+    min-height: 1861px;
+}
+
+#company {
+    min-width: 900px;
+    min-height: 365px;
+    border: 1px solid red;
+}
+
+#ads {
+    min-width: 900px;
+    min-height: 1161px;
+    border: 1px solid red;
+}
+
+#footer {
+    min-width: 1024px;
+    min-height: 604px;
+    border: 1px solid red;
+}

@@ -41,12 +41,12 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.title}</h1>
-                <h2>{this.state.price}</h2>
-                <p>{this.state.description}</p>
-                <p>{this.state.shopName}</p>
-                <p>{this.state.shopIconURL}</p>
-                <p>{this.state.custom_shops_state}</p>
+                <div id='data-buy-box'></div>
+                <hr></hr>
+                <div id='listing-overview'></div>
+                <hr></hr>
+                <div id='shipping-info'></div>
+                <div id='seller-info'></div>
             </div>
         );
     }
