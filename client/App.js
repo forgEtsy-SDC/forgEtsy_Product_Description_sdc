@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Style from './App.css';
-
-const axios = require('axios');
+import axios from 'axios';
+import unescape from 'lodash.unescape';
 
 class App extends Component {
     constructor(props) {
@@ -25,10 +25,10 @@ class App extends Component {
 
                 if (data.type !== 'Error') {
                     this.setState({
-                        title: data.title,
+                        title: unescape(data.title),
                         price: data.price,
-                        description: data.description,
-                        shopName: data.Shop.shop_name,
+                        description: unescape(data.description),
+                        shopName: unescape(data.Shop.shop_name),
                         shopIconURL: data.Shop.icon_url_fullxfull,
                         custom_shops_state: data.Shop.custom_shops_state
                     })
