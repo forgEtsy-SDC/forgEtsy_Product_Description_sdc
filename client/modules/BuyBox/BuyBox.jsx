@@ -29,16 +29,12 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
                 </div>
             </div>
 
-            <label htmlFor="quantity">Quantity</label>
-            <br></br>
-            <select id="quantity">
-                <option value='1'>1</option>
-            </select>
-
             <ProductOptions options={productOptions} />
 
-            <div>
-                <button>Add to cart</button>
+            <div className={Style.button_region}>
+                <div>
+
+                </div>
             </div>
 
         </div>

@@ -75,3 +75,14 @@
     letter-spacing: normal;
     text-align: left;
 }
+
+.button_region {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0px 0px 14px 0px;
+}
+
+.form {
+    margin: 0;
+    box-sizing: border-box;
+}
