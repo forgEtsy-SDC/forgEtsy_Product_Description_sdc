@@ -1,0 +1,77 @@
+.title_wrapper {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.title {
+    color: #333;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 12px;
+    word-break: break-word;
+    word-wrap: break-word;
+    width: auto;
+}
+
+.pricing_wrapper {
+    margin-bottom: 12px;
+}
+
+.major_minor {
+    margin: 0;
+}
+
+.price_major {
+    color: #333;
+    font-family: 'Vollkorn', serif;
+    line-height: 1.4;
+    text-align: left;
+    font-size: 128.57%;
+    font-weight: 500;
+    margin: 0;
+}
+
+.price_minor {
+    color: #595959;
+    font-family: 'Vollkorn', serif;
+    line-height: 1.4;
+    text-align: left;
+    font-size: 85.71%;
+}
+
+.save {
+    margin: 0;
+    margin-right: 6px;
+    color: #2e8539;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.shipping {
+    margin: 0;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: #595959;
+    font-size: 14px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.shipping_link {
+    text-decoration: underline !important;
+    color: #222;
+    background: transparent;
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+}

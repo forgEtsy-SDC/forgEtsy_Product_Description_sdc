@@ -1,0 +1,22 @@
+.wrapper {
+    margin-bottom: 6px;
+    align-items: center !important;
+    display: flex !important;
+    box-sizing: border-box;
+}
+
+.name {
+    color: #757575;
+    text-decoration: none;
+    background: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Vollkorn', serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.rateing {
+
+}
