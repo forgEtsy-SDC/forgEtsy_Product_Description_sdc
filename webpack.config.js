@@ -12,8 +12,9 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         include: SRC_DIR,
-        loader: 'babel-loader',
+        use: ['babel-loader']
       },
       {
         test: /\.css$/,
@@ -29,5 +30,15 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    contentBase: './dist',
+    hot: true
   }
 };

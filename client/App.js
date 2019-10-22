@@ -64,7 +64,7 @@ class App extends Component {
                     shopIconURL={this.state.shopIconURL}
                 />
             </div>
-        );
+        )
     }
 }
 
