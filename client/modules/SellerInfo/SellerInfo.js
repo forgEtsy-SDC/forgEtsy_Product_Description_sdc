@@ -1,9 +1,7 @@
 import React from 'react';
 
-export default function SellerInfo() {
+export default function SellerInfo({ shopName, shopIconURL }) {
     return (
-        <div>
-            SellerInfo
-        </div>
+        <div>{shopName}</div>
     )
 }
