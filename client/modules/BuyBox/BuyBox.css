@@ -116,3 +116,138 @@
     white-space: nowrap;
     text-transform: none;
 }
+
+.people_want_this_wrapper {
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    border-top: 0px solid #E1E3DF;
+    background-color: #FFF;
+    display: table;
+    width: 100%;
+}
+
+.outter_cart {
+    margin: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding-right: 12px;
+    display: table-cell;
+}
+
+.svg {
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.g {
+    margin: 0;
+    box-sizing: border-box;
+    animation: cart-hop 1.5s ease 0s 1 normal none;
+    transform-origin: 50% 100%;
+}
+
+@keyframes cart-hop {
+    33% {
+        transform: scaleY(0.85);
+    }
+    55% {
+        transform: scaleY(1.05) translateY(-4px);
+    }
+    80% {
+        transform: scaleY(1) translateY(0px);
+    }
+}
+
+.path_one {
+    margin: 0;
+    box-sizing: border-box;
+    animation: cart-fill-appear 1.5s;
+    opacity: 1;
+}
+
+@keyframes cart-fill-appear {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+}
+
+.path {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.line_one {
+    margin: 0;
+    box-sizing: border-box;
+    animation: line-right-grow 1.5s;
+    opacity: 1;
+    transform-origin: 0% 100%;
+}
+
+@keyframes line-right-grow {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.line_two {
+    margin: 0;
+    box-sizing: border-box;
+    animation: line-center-grow 1.5s;
+    opacity: 1;
+    transform-origin: 50% 100%;
+}
+
+@keyframes line-center-grow {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.line_three {
+    margin: 0;
+    box-sizing: border-box;
+    animation: line-left-grow 1.5s;
+    opacity: 1;
+    transform-origin: 100% 100%;
+}
+
+@keyframes line-left-grow {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
