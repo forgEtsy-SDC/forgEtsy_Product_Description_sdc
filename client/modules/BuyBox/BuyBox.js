@@ -9,9 +9,18 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
                 shopName={shopName}
                 shopStars={shopStars}
             />
-            <div>{title}</div>
+            <h1>{title}</h1>
             <div>${price}</div>
+            <div>Free shipping to <a href='#'>United States</a></div>
+            <label htmlFor="quantity">Quantity</label>
+            <br></br>
+            <select id="quantity">
+                <option value='1'>1</option>
+            </select>
             <ProductOptions options={productOptions}/>
+            <div>
+                <button>Add to cart</button>
+            </div>
         </div>
     )
 }

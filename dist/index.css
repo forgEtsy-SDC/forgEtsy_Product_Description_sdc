@@ -38,6 +38,7 @@
 #root {
     grid-area: root;
     min-width: 282px;
+    max-width: 382px;
     min-height: 1861px;
 }
 
