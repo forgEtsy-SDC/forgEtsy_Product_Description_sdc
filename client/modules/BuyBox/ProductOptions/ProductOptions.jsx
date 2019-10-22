@@ -1,5 +1,5 @@
 import React from 'react';
-import Option from './Option/Option.cjsx';
+import Option from './Option/Option';
 
 export default function ProductOptions({ options }) {
     return options.map(option => (
