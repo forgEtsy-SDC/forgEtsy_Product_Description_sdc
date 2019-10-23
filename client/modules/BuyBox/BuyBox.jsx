@@ -40,8 +40,9 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
             </div>
 
             <div className={Style.people_want_this_wrapper}>
-                <div className={Style.outter_cart}>
-                    <svg className={Style.svg}>
+
+                <div className={Style.people_want_this_left}>
+                    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' height='48' width='48' aria-hidden='true' focusable='false' className={Style.svg}>
                         <g className={Style.g}>
                             <path fill='#FFAC5D' d='M19,33h20l5-18H15' className={Style.path_one}></path>
                             <path fill='#333333' d='M43,14H14.7L13,5.8C12.8,5.3,12.5,5,12,5H5C4.3,5,4,5.4,4,6s0.4,1,1,1h6.2l1.8,8c0,0.1,0,0.3,0.1,0.4   l4,17.8c0.1,0.5,0.5,0.8,1,0.8h20c0.6,0,1-0.4,1-1s-0.4-1-1-1H18.8l-3.6-16H43c0.6,0,1-0.4,1-1S43.6,14,43,14z' className={Style.path}></path>
@@ -53,9 +54,12 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
                         <line fill='none' stroke='#333333' strokeWidth='2' stroke-strokeLinecap='round' strokeLinejoin='round' x1='21' y1='8' x2='24' y2='11.1' className={Style.line_three}></line>
                     </svg>
                 </div>
-                <div>
 
+                <div className={Style.people_want_this_right}>
+                    <span className={Style.people_want_this_inner}>Other people want this.</span>
+                    Over 20 people have this in their carts right now.
                 </div>
+
             </div>
 
         </div>

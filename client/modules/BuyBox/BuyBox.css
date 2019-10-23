@@ -129,7 +129,7 @@
     width: 100%;
 }
 
-.outter_cart {
+.people_want_this_left {
     margin: 0;
     box-sizing: border-box;
     vertical-align: top;
@@ -250,4 +250,27 @@
         opacity: 1;
         transform: scale(1);
     }
+}
+
+.people_want_this_right {
+    margin: 0;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    color: #222;
+    font-family: 'Vollkorn', serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.people_want_this_inner {
+    font-weight: 500;
+    margin: 0;
+    box-sizing: border-box;
+    color: #222;
+    font-family: 'Vollkorn', serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
 }
