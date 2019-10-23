@@ -114,3 +114,58 @@
     margin: 0;
     fill: currentColor;
 }
+
+.message_seller {
+    padding-top: 18px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.message_seller_a {
+    background-color: #FFF;
+    border-color: rgba(0, 0, 0, 0.15);
+    color: #222;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    height: 38px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.seller_response {
+    padding-top: 6px;
+    font-size: 14px;
+	font-family: 'Vollkorn', serif;
+	font-weight: 300;
+	line-height: 1.6;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    margin: 0;
+    color: #222;
+    text-align: left;
+}
+
+.b {
+    font-weight: 500;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 14px;
+	font-family: 'Vollkorn', serif;
+	font-weight: 300;
+	line-height: 1.6;
+    letter-spacing: normal;
+    color: #222;
+    text-align: left;
+}

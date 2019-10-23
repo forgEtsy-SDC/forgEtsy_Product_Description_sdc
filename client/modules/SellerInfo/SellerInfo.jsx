@@ -29,8 +29,11 @@ export default function SellerInfo({ shopName, shopIconURL }) {
 
             </div>
 
-            <div></div>
-            <div></div>
+            <div className={Style.message_seller}>
+                <a href='#' className={Style.message_seller_a}>Message the Seller</a>
+            </div>
+
+            <div className={Style.seller_response}>This seller usually responds <b className={Style.b}>within a few hours.</b></div>
 
         </div>
     )
