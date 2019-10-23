@@ -1,0 +1,116 @@
+.faq_wrapper {
+    padding: 18px 0;
+    margin: 0;
+    border-bottom: 1px solid #E1E3DF;
+    background-color: #FFF;
+    box-sizing: border-box;
+}
+
+.botton_wrapper {
+    margin: 0;
+    margin-top: 12px;
+    box-sizing: border-box;
+    width: auto;
+}
+
+.button {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between !important;
+    display: flex !important;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    height: inherit;
+}
+
+.button_text {
+    padding-bottom: 12px;
+    box-sizing: border-box;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Vollkorn', serif;
+    line-height: 1.6;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.span {
+    margin: 0;
+    box-sizing: border-box;
+    margin-left: -3px;
+    margin-right: -8px;
+    top: 0;
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    vertical-align: middle;
+    width: 24px;
+    transition: all 0.15ms linear;
+    transform-origin: 50% 45%;
+    position: relative;
+}
+
+.svg {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.path {
+    overflow: hidden;
+    margin: 0;
+    fill: currentColor;
+}
+
+.questions_wrapper {
+    height: 0px;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0px solid #E1E3DF;
+    background-color: #FFF;
+    float: none;
+    position: relative;
+}
+
+.questions_wrapper::before {
+    content: " ";
+    display: table;
+}
+
+.questions_wrapper::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.questions_wrapper_visible {
+    overflow: visible;
+    visibility: visible;
+}
+
+.questions_wrapper_hidden {
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.questions_wrapper_inner {
+    padding-top: 6px;
+    word-break: break-word;
+    word-wrap: break-word;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+}
