@@ -19,7 +19,20 @@ export default function ListingOverview({ description }) {
 
             </div>
 
-            {description}
+            <div className={Style.description_wrapper_outter}>
+                <div className={Style.description_wrapper_inner}>
+
+                    <div className={Style.description}>
+                        {description}
+                    </div>
+
+                    <div className={Style.button_wrapper}>
+                        <button className={Style.button}>Learn more about this item</button>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     )
 }
