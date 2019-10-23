@@ -56,7 +56,7 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
                 </div>
 
                 <div className={Style.people_want_this_right}>
-                    <span className={Style.people_want_this_inner}>Other people want this.</span>
+                    <span className={Style.people_want_this_inner}>Other people want this. </span>
                     Over 20 people have this in their carts right now.
                 </div>
 

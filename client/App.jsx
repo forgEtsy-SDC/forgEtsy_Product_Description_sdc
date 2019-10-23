@@ -31,7 +31,7 @@ class App extends Component {
                     this.setState({
                         title: unescape(data.title),
                         price: data.price,
-                        description: unescape(data.description),
+                        description: data.description,
                         shopName: unescape(data.Shop.shop_name),
                         shopIconURL: data.Shop.icon_url_fullxfull,
                         shopStars: data.Shop.custom_shops_state,
