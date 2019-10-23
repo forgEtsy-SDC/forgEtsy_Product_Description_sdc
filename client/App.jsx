@@ -53,11 +53,11 @@ class App extends Component {
                     shopStars={this.state.shopStars}
                     productOptions={this.state.productOptions}
                 />
-                <hr></hr>
+                <hr className={Style.hr}></hr>
                 <ListingOverview
                     description={this.state.description}
                 />
-                <hr></hr>
+                <hr className={Style.hr}></hr>
                 <ShippingInfo />
                 <SellerInfo
                     shopName={this.state.shopName}

@@ -1,0 +1,55 @@
+.wrapper {
+    background-color: #FFF;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.item_details {
+    margin-top: 18px 0px;
+    font-weight: 500;
+    background-color: #FFF;
+    font-size: 16px;
+    font-family: 'Vollkorn', serif;
+    line-height: 1.6;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    width: auto;
+    color: #333;
+    text-align: left;
+}
+
+.handmade_wrapper {
+    padding: 6px 0px;
+    margin: 0;
+    display: flex !important;
+    box-sizing: border-box;
+}
+
+.handmade_left {
+    padding-right: 6px;
+    bottom: 2px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.svg {
+    overflow: hidden;
+    margin: 0;
+}
+
+.path {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.handmade_right {
+    padding-top: 6px;
+    box-sizing: border-box;
+    margin: 0;
+    color: #222;
+    font-family: 'Vollkorn', serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
