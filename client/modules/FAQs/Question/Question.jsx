@@ -1,14 +1,13 @@
 import React from 'react';
 import Style from './Question.css';
 
-export default function Question({ id, question: { question, answer }, handleOnClick, visible }) {
-    console.log(id)
+export default function Question({ id, question: { question, answer }, handleOnClick }) {
     return (
         <div className={Style.question_wrapper}>
 
             <h3 className={Style.question_button_wrapper}>
                 {/* Button needs to trigger visibility AND overflow */}
-                <button className={Style.button} onClick={handleOnClick}>
+                <button className={Style.button} onClick={handleOnClick} value={id}>
 
                     <span className={Style.question_button_text}>{question}</span>
 
@@ -23,7 +22,7 @@ export default function Question({ id, question: { question, answer }, handleOnC
                 </button>
             </h3>
 
-            <div className={Style.question_answer, visible ? Style.question_answer_visible : Style.question_answer_hidden}>{answer}</div>
+            <div className={Style.question_answer}>{answer}</div>
 
         </div>
     )

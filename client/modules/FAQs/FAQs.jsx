@@ -26,7 +26,13 @@ class FAQs extends Component {
                     answer: 'You can add the personalization to the Build your own box on the comments for the item or we encourage you to message us! You could even send us the link to each item you’d like for your box. '
                 },
             ],
-            faqsVisible: false
+            visibility: {
+                FAQs: false,
+                0: false,
+                1: false,
+                2: false,
+                3: false
+            }
         }
 
         this.handleOnClick = this.handleOnClick.bind(this);
@@ -34,7 +40,18 @@ class FAQs extends Component {
 
     handleOnClick(event) {
         console.log(event.target);
-        this.setState({ faqsVisible: !this.state.faqsVisible })
+        console.log(event.target.nodeName);
+        this.setState({ visibility: { FAQs: !this.state.visibility.FAQs } })
+
+        if (event.target.nodeName === 'SPAN') {
+            if (event.target.parentNode.value === '') {
+                this.setState({ visibility: { FAQs: !this.state.visibility.FAQs } })
+            }
+        } else if (event.target.nodeName === 'BUTTON') {
+            if (event.target.value === '') {
+                this.setState({ visibility: { FAQs: !this.state.visibility.FAQs } })
+            }
+        }
     }
 
     render() {
@@ -56,7 +73,7 @@ class FAQs extends Component {
                     </button>
                 </h2>
 
-                <div className={Style.questions_wrapper, this.state.faqsVisible ? Style.questions_wrapper_visible : Style.questions_wrapper_hidden}>
+                <div className={Style.questions_wrapper, this.state.visibility.FAQs ? Style.questions_wrapper_visible : Style.questions_wrapper_hidden}>
                     <div className={Style.questions_wrapper_inner}>
 
                         {this.state.faqs.map((question, i) => <Question key={i} id={i} question={question} handleOnClick={this.handleOnClick} visible={this.state.faqsVisible ? true : false} />)}
