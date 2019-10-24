@@ -46,15 +46,29 @@ class FAQs extends Component {
 
             let targetValue = event.currentTarget.value;
 
-            this.setState(({ questionVisibility }) => {
-                for (let i = 0; i < 4; i++) {
-                    questionVisibility[i] = false;
-                }
-            })
+            if (this.state.questionVisibility[targetValue]) {
 
-            this.setState(({ questionVisibility }) => {
-                questionVisibility[targetValue] = !this.state.questionVisibility[targetValue];
-            })
+                this.setState(({ questionVisibility }) => {
+                    for (let i = 0; i < 4; i++) {
+                        questionVisibility[i] = false;
+                    }
+                })
+
+            } else {
+
+                this.setState(({ questionVisibility }) => {
+                    for (let i = 0; i < 4; i++) {
+                        questionVisibility[i] = false;
+                    }
+                })
+
+                this.setState(({ questionVisibility }) => {
+                    console.log(questionVisibility);
+                    questionVisibility[targetValue] = questionVisibility[targetValue] ? false : true;
+                    console.log(questionVisibility);
+                })
+
+            }
 
             this.forceUpdate();
 

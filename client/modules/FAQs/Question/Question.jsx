@@ -22,7 +22,6 @@ class Question extends Component {
 
     render() {
         return (
-
             this.props.id === 3 ? (
                 <div className={Style.question_wrapper_last}>
 
