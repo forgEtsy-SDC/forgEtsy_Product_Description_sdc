@@ -86,8 +86,8 @@
     height: 240px;
     min-height: 240px;
     visibility: visible;
-    position: relative;
     overflow: hidden;
+    position: relative;
     box-sizing: border-box;
     margin: 0;
     font-size: 14px;
