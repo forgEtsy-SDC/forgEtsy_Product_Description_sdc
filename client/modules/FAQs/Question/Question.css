@@ -36,7 +36,6 @@
 .question_wrapper {
     border-radius: 3px;
     background-color: #FFF;
-    border-bottom: 1px solid #E1E3DF;
     margin: 0;
     box-sizing: border-box;
     word-break: break-word;
@@ -84,4 +83,15 @@
 	font-size: 14px;
     line-height: 1.4;
     display: block;
+}
+
+.question_wrapper_last {
+    border-radius: 3px;
+    background-color: #FFF;
+    margin: 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    word-wrap: break-word;
+    padding: 18px 0;
+    border-bottom: 1px solid #E1E3DF;
 }
