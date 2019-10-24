@@ -26,32 +26,39 @@ class FAQs extends Component {
                     answer: 'You can add the personalization to the Build your own box on the comments for the item or we encourage you to message us! You could even send us the link to each item you’d like for your box. '
                 },
             ],
-            visibility: {
-                FAQs: false,
-                0: false,
-                1: false,
-                2: false,
-                3: false
-            }
+            visibility: false,
+            questionVisibility: [
+                false,
+                false,
+                false,
+                false
+            ]
         }
 
         this.handleOnClick = this.handleOnClick.bind(this);
     }
 
     handleOnClick(event) {
-        console.log(event.target);
-        console.log(event.target.nodeName);
-        this.setState({ visibility: { FAQs: !this.state.visibility.FAQs } })
 
-        if (event.target.nodeName === 'SPAN') {
-            if (event.target.parentNode.value === '') {
-                this.setState({ visibility: { FAQs: !this.state.visibility.FAQs } })
-            }
-        } else if (event.target.nodeName === 'BUTTON') {
-            if (event.target.value === '') {
-                this.setState({ visibility: { FAQs: !this.state.visibility.FAQs } })
-            }
+        if (event.currentTarget.value === '') {
+            this.setState({ visibility: !this.state.visibility })
+        } else {
+
+            console.log(this.state.questionVisibility);
+
+            let targetValue = event.currentTarget.value;
+
+            this.setState(({ questionVisibility }) => {
+                questionVisibility.map(cur => cur = false);
+            })
+
+            this.setState(({ questionVisibility }) => {
+                questionVisibility[targetValue] = !this.state.questionVisibility[targetValue];
+                console.log(questionVisibility[targetValue])
+            })
+
         }
+
     }
 
     render() {
@@ -59,7 +66,6 @@ class FAQs extends Component {
             <div className={Style.faq_wrapper}>
 
                 <h2 className={Style.botton_wrapper}>
-                    {/* Button needs to trigger visibility AND overflow */}
                     <button className={Style.button} onClick={this.handleOnClick}>
 
                         <div className={Style.button_text}>FAQs</div>
@@ -73,13 +79,15 @@ class FAQs extends Component {
                     </button>
                 </h2>
 
-                <div className={Style.questions_wrapper, this.state.visibility.FAQs ? Style.questions_wrapper_visible : Style.questions_wrapper_hidden}>
-                    <div className={Style.questions_wrapper_inner}>
+                {this.state.visibility ? (
+                    <div className={Style.questionVisibility}>
+                        <div className={Style.questions_wrapper_inner}>
 
-                        {this.state.faqs.map((question, i) => <Question key={i} id={i} question={question} handleOnClick={this.handleOnClick} visible={this.state.faqsVisible ? true : false} />)}
+                            {this.state.faqs.map((question, i) => <Question key={i} id={i} question={question} visibility={this.state.questionVisibility[i]} handleOnClick={this.handleOnClick} />)}
 
+                        </div>
                     </div>
-                </div>
+                ) : null}
 
             </div>
         );

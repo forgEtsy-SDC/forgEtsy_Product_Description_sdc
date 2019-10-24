@@ -82,27 +82,7 @@
     background-color: #FFF;
     float: none;
     position: relative;
-}
-
-.questions_wrapper::before {
-    content: " ";
-    display: table;
-}
-
-.questions_wrapper::after {
-    content: " ";
-    display: table;
-    clear: both;
-}
-
-.questions_wrapper_visible {
-    overflow: visible;
-    visibility: visible;
-}
-
-.questions_wrapper_hidden {
-    overflow: hidden;
-    visibility: hidden;
+    display: block;
 }
 
 .questions_wrapper_inner {

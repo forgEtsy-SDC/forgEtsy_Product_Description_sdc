@@ -37,7 +37,7 @@
     border-radius: 3px;
     background-color: #FFF;
     border-bottom: 1px solid #E1E3DF;
-    margin: 0 0 12px;
+    margin: 0;
     box-sizing: border-box;
     word-break: break-word;
     word-wrap: break-word;
@@ -83,14 +83,5 @@
 	font-family: 'Vollkorn', serif;
 	font-size: 14px;
     line-height: 1.4;
-}
-
-.question_answer_visible {
-    visibility: visible;
-    overflow: visible;
-}
-
-.question_answer_hidden {
-    visibility: hidden;
-    overflow: hidden;
+    display: block;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import Style from './Option.css';
 
 export default function Option({ option }) {
-    console.log(option);
     return (
         <div>
 
