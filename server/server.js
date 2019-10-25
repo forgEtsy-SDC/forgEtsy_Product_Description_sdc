@@ -31,7 +31,6 @@ app.get('/api/listing/:listing_id', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    console.log('sent')
     res.sendFile(path.join(__dirname + '/../dist/index.html'));
 })
 

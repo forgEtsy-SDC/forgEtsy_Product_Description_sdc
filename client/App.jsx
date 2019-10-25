@@ -24,10 +24,12 @@ class App extends Component {
             productOptions: [],
             descriptionVisible: false
         }
+
+        this.getProductInfo = this.getProductInfo.bind(this);
+        this.updateLocation = this.updateLocation.bind(this);
     }
 
     componentDidMount() {
-        console.log(this.props.match.params)
         window.addEventListener('click', this.updateLocation);
         this.getProductInfo();
     }
