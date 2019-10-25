@@ -4,8 +4,7 @@
   "description": "The product description service for our forgEtsy group project",
   "scripts": {
     "start": "node server/server.js",
-    "devStart": "nodemon server/server.js",
-    "devBundle": "webpack -d --watch"
+    "devStart": "webpack-dev-server --config ./webpack.config.js --mode development"
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "lodash.unescape": "^4.0.1",
     "mongoose": "^5.7.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
@@ -35,8 +35,10 @@
     "css-loader": "^3.2.0",
     "nodemon": "^1.19.3",
     "path": "^0.12.7",
+    "react-hot-loader": "^4.12.15",
     "style-loader": "^1.0.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
   }
 }

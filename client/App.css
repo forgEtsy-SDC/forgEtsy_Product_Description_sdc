@@ -1,3 +1,16 @@
-.h1 {
-    color: red
+.wrapper {
+    padding-left: 12px;
+    padding-right: 18px;
+    float: right;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.hr {
+    background-color: #E1E3DF;
+    border: 0;
+    height: 1px;
+    margin: 18px 0;
+    width: 100%;
+    box-sizing: border-box;
 }

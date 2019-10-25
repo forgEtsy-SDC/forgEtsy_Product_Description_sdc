@@ -1,0 +1,54 @@
+#header {
+    min-width: 1024px;
+    min-height: 132px;
+}
+
+#container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "leftSide root";
+}
+
+#leftSide {
+    grid-area: leftSide;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+        "pictures"
+        "reviews";
+}
+
+#pictures {
+    grid-area: pictures;
+    min-width: 594px;
+    min-height: 412px;
+}
+
+#reviews {
+    grid-area: reviews;
+    min-width: 558px;
+    min-height: 1607px;
+}
+
+#productDescription {
+    grid-area: root;
+    min-width: 282px;
+    max-width: 382px;
+    min-height: 1861px;
+}
+
+#company {
+    min-width: 900px;
+    min-height: 365px;
+}
+
+#ads {
+    min-width: 900px;
+    min-height: 1161px;
+}
+
+#footer {
+    min-width: 1024px;
+    min-height: 604px;
+}

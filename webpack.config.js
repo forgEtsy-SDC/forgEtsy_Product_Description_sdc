@@ -1,6 +1,8 @@
-const path = require('path');
-const SRC_DIR = path.join(__dirname, '/client');
-const DIST_DIR = path.join(__dirname, '/dist');
+const path = require('path'),
+  SRC_DIR = path.join(__dirname, '/client'),
+  DIST_DIR = path.join(__dirname, '/dist'),
+  webpack = require('webpack');
+
 
 module.exports = {
   entry: `${SRC_DIR}/index.js`,
@@ -12,8 +14,17 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         include: SRC_DIR,
-        loader: 'babel-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+              plugins: ['react-hot-loader/babel'],
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -29,5 +40,15 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx']
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    contentBase: './dist',
+    hot: true
   }
 };
