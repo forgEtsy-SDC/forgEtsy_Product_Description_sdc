@@ -4,6 +4,7 @@
   "description": "The product description service for our forgEtsy group project",
   "scripts": {
     "start": "node server/server.js",
+    "build": "webpack",
     "devStart": "webpack-dev-server --config ./webpack.config.js --mode development"
   },
   "repository": {
