@@ -14,14 +14,15 @@ class App extends Component {
         super(props);
 
         this.state = {
-            listing_id: 269709264,
+            listing_id: 656660118,
             title: '',
             price: '',
             description: '',
             shopName: '',
             shopIconURL: '',
             shopStars: '',
-            productOptions: []
+            productOptions: [],
+            descriptionVisible: false
         }
     }
 
