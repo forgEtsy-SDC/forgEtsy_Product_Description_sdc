@@ -14,7 +14,7 @@ class App extends Component {
         super(props);
 
         this.state = {
-            listing_id: 656660118,
+            listing_id: this.props.match.params.productId,
             title: '',
             price: '',
             description: '',
@@ -27,7 +27,14 @@ class App extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://ec2-18-224-213-224.us-east-2.compute.amazonaws.com/api/listing/${this.state.listing_id}`)
+        console.log(this.props.match.params)
+        window.addEventListener('click', this.updateLocation);
+        this.getProductInfo();
+    }
+
+    getProductInfo(productIdParam) {
+        const productId = productIdParam ? productIdParam : this.state.listing_id;
+        axios.get(`http://ec2-18-224-213-224.us-east-2.compute.amazonaws.com/api/listing/${productId}`)
             .then(({ data }) => {
                 if (data.type !== 'Error') {
                     this.setState({
@@ -43,6 +50,18 @@ class App extends Component {
             })
             // UPDATE with approperiate error handling
             .catch(err => console.log(err))
+    }
+
+    updateLocation() {
+        let productId = window.location.pathname;
+        productId = productId.replace(/\//, '');
+        if (Number(productId) !== this.state.productId) {
+            this.getProductInfo(productId);
+        }
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('click', this.updateLocation);
     }
 
     render() {
