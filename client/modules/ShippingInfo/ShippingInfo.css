@@ -37,7 +37,7 @@
 }
 
 .h2 {
-    font-weight: 500;
+    font-weight: 700;
     color: #222;
     font-size: 16px;
     font-family: 'Vollkorn', serif;
@@ -61,7 +61,7 @@
 .estimated_delivery_wrapper {
     box-sizing: border-box;
     margin: 0;
-    font-weight: 500;
+    font-weight: 700;
     color: #222;
     font-size: 14px;
     font-family: 'Vollkorn', serif;

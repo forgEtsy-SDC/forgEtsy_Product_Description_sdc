@@ -33,9 +33,9 @@ class App extends Component {
                     this.setState({
                         title: unescape(data.title),
                         price: data.price,
-                        description: data.description,
+                        description: unescape(data.description),
                         shopName: unescape(data.Shop.shop_name),
-                        shopIconURL: data.Shop.icon_url_fullxfull,
+                        shopId: data.Shop.shop_id,
                         shopStars: data.Shop.custom_shops_state,
                         productOptions: data.product_options
                     })
@@ -53,6 +53,7 @@ class App extends Component {
                     title={this.state.title}
                     price={this.state.price}
                     shopName={this.state.shopName}
+                    shopId={this.state.shopId}
                     shopStars={this.state.shopStars}
                     productOptions={this.state.productOptions}
                 />
@@ -65,11 +66,13 @@ class App extends Component {
 
                 <hr className={Style.hr}></hr>
 
-                <ShippingInfo />
+                <ShippingInfo
+                    shopId={this.state.shopId}
+                />
 
                 <SellerInfo
                     shopName={this.state.shopName}
-                    shopIconURL={this.state.shopIconURL}
+                    shopId={this.state.shopId}
                 />
 
                 <FAQs />

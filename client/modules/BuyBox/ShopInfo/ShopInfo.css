@@ -17,6 +17,44 @@
     text-align: left;
 }
 
-.rateing {
+.name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
+.rating_wrapper {
+    text-decoration: none !important;
+    color: #222 !important;
+    margin-left: 6px;
+    display: flex !important;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.star_wrapper {
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+    margin: 0;
+    box-sizing: border-box;
+    color: #222 !important;
+}
+
+.number_of_reviews {
+    margin-left: 6px;
+    color: #595959;
+    font-size: 14px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.number_of_reviews:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }

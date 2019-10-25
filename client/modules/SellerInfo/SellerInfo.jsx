@@ -1,7 +1,12 @@
 import React from 'react';
 import Style from './SellerInfo.css';
+import faker from 'faker';
 
-export default function SellerInfo({ shopName, shopIconURL }) {
+export default function SellerInfo({ shopName, shopId }) {
+    faker.seed(shopId);
+
+
+
     return (
         <div className={Style.wrapper}>
 
@@ -10,11 +15,11 @@ export default function SellerInfo({ shopName, shopIconURL }) {
             <div className={Style.seller_wrapper}>
 
                 <div className={Style.image_wrapper}>
-                    <img className={Style.image} src={shopIconURL}></img>
+                    <img className={Style.image} src={faker.fake("{{image.avatar}}")}></img>
                 </div>
 
                 <div className={Style.seller_info_wrapper}>
-                    <h3 className={Style.seller_name}>Random Name</h3>
+                    <h3 className={Style.seller_name}>{faker.fake("{{name.firstName}} {{name.lastName}}")}</h3>
 
                     <p className={Style.location_wrapper}>
                         <span className={Style.location_icon_wrapper}>
@@ -22,7 +27,7 @@ export default function SellerInfo({ shopName, shopIconURL }) {
                                 <path d='M12,3A6.287,6.287,0,0,0,6,9c0,3.167,6,12,6,12s6-8.812,6-12A6.287,6.287,0,0,0,12,3Zm0,7.875a2.25,2.25,0,1,1,2.25-2.25A2.25,2.25,0,0,1,12,10.875Z' className={Style.path}></path>
                             </svg>
                         </span>
-                        Miami, Flordia
+                        {faker.fake("{{address.city}}, {{address.state}}")}
                     </p>
 
                 </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 import Style from './ShippingInfo.css';
+import faker from 'faker';
 
-export default function ShippingInfo() {
+export default function ShippingInfo({ shopId }) {
+    faker.seed(shopId);
+
     return (
         <div className={Style.wrapper}>
             <div className={Style.inner_wrapper}>
@@ -17,7 +20,7 @@ export default function ShippingInfo() {
                     </div>
 
                     <div className={Style.from}>
-                        From United States
+                        From {faker.fake("{{address.country}}")}
                     </div>
 
                     <div className={Style.shipping_costs_wrapper}>

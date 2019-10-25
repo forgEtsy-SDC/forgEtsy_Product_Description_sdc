@@ -3,12 +3,13 @@ import ShopInfo from './ShopInfo/ShopInfo';
 import ProductOptions from './ProductOptions/ProductOptions';
 import Style from './BuyBox.css';
 
-export default function BuyBox({ title, price, shopName, shopStars, productOptions }) {
+export default function BuyBox({ title, price, shopName, shopStars, productOptions, shopId }) {
     return (
         <div>
 
             <ShopInfo
                 shopName={shopName}
+                shopId={shopId}
                 shopStars={shopStars}
             />
 
