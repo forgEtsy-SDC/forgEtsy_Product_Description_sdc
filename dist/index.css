@@ -1,7 +1,6 @@
 #header {
     min-width: 1024px;
     min-height: 132px;
-    border: 1px solid red;
 }
 
 #container {
@@ -18,21 +17,18 @@
     grid-template-areas: 
         "pictures"
         "reviews";
-    border: 1px solid red;
 }
 
 #pictures {
     grid-area: pictures;
     min-width: 594px;
     min-height: 412px;
-    border: 1px solid red;
 }
 
 #reviews {
     grid-area: reviews;
     min-width: 558px;
     min-height: 1607px;
-    border: 1px solid red;
 }
 
 #productDescription {
@@ -45,17 +41,14 @@
 #company {
     min-width: 900px;
     min-height: 365px;
-    border: 1px solid red;
 }
 
 #ads {
     min-width: 900px;
     min-height: 1161px;
-    border: 1px solid red;
 }
 
 #footer {
     min-width: 1024px;
     min-height: 604px;
-    border: 1px solid red;
 }
