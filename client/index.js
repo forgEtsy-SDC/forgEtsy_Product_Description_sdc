@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App';
+import RouterDOM from './RouterDOM';
 
-ReactDOM.render(<App />, document.getElementById('productDescription'));
+ReactDOM.render(<RouterDOM />, document.getElementById('productDescription'));
