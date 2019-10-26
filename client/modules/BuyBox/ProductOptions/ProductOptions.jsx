@@ -6,11 +6,11 @@ export default function ProductOptions({ options }) {
     return (
         <div className={Style.wrapper}>
 
-            {options.map(option => (
+            {options ? (options.map(option => (
                 <div className={Style.options_wrapper} key={option._id}>
                     <Option option={option} />
                 </div>
-            ))}
+            ))) : null}
 
             <div className={Style.quantity_wrapper}>
                 <label
