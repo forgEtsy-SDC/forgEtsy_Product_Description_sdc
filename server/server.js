@@ -10,8 +10,8 @@ const port = 3002;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname + '/../dist')));
 app.use(compression());
+app.use(express.static(path.join(__dirname + '/../dist')));
 
 app.get('/api/listing/:listing_id', (req, res) => {
     Products.find(req.params, (err, docs) => {
