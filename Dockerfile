@@ -1,10 +1,12 @@
-FROM node:12
+FROM node:lts-slim
 
-COPY package*.json ./
+WORKDIR /webapp
+
+COPY package*.json /webapp/
 
 RUN npm install
 
-COPY . .
+COPY . /webapp/
 
 EXPOSE 3002
 
