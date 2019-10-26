@@ -31,7 +31,7 @@ class App extends Component {
 
     componentDidMount() {
         window.addEventListener('click', this.updateLocation);
-        this.getProductInfo();
+        this.updateLocation();
     }
 
     getProductInfo(productIdParam) {
