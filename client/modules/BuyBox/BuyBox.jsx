@@ -31,7 +31,7 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
 
             <div className={Style.button_region}>
                 <form className={Style.button_region}>
-                    <button className={Style.button}>
+                    <button className={Style.button} onClick={event => event.preventDefault()}>
                         <div className={Style.button_text}>Add to cart</div>
                     </button>
                 </form>
