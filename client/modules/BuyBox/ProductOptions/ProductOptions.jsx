@@ -3,6 +3,7 @@ import Option from './Option/Option';
 import Style from './ProductOptions.css';
 
 export default function ProductOptions({ options }) {
+    let quantityArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return (
         <div className={Style.wrapper}>
 
@@ -19,7 +20,9 @@ export default function ProductOptions({ options }) {
                 </label>
                 <div className={Style.select_wrapper}>
                     <select className={Style.select} id="quantity">
-                        <option className={Style.option} value='1'>1</option>
+                        {quantityArr.map((value) => {
+                            return <option className={Style.option} value={value}>{value}</option>
+                        })}
                     </select>
                 </div>
             </div>

@@ -51,7 +51,7 @@
 }
 
 .shipping_link {
-    text-decoration: underline !important;
+    text-decoration: underline;
     color: #222;
     background: transparent;
     margin: 0;

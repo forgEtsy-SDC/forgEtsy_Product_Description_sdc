@@ -21,7 +21,7 @@
 .handmade_wrapper {
     padding: 6px 0px;
     margin: 0;
-    display: flex !important;
+    display: flex;
     box-sizing: border-box;
 }
 
@@ -142,7 +142,7 @@
 }
 
 .button_wrapper {
-    text-align: center !important;
+    text-align: center;
     box-sizing: border-box;
     margin: 0;
     letter-spacing: normal;
