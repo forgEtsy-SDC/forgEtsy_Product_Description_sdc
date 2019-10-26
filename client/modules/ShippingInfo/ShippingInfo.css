@@ -115,8 +115,8 @@
 }
 
 .button {
-    color: #222 !important;
-    text-decoration: underline !important;
+    color: #222;
+    text-decoration: underline;
     padding: 0px;
     background-color: transparent;
     border: none;
@@ -165,7 +165,7 @@
 }
 
 .view_policies_span {
-    text-decoration: none !important;
+    text-decoration: none;
     color: #222;
     font-weight: normal;
     box-sizing: border-box;
