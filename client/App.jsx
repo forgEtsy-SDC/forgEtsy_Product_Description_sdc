@@ -59,6 +59,7 @@ class App extends Component {
         productId = productId.replace(/\//, '');
         if (Number(productId) !== this.state.productId) {
             this.getProductInfo(productId);
+            this.setState({ listing_id: productId })
         }
     }
 

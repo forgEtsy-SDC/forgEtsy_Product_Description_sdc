@@ -25,9 +25,6 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
                 <p className={Style.save}>
                     You save {((price * 1.62) - price).toFixed(2)} (62%)
                 </p>
-                <div className={Style.shipping}>
-                    Free shipping to <a href='#'>United States</a>
-                </div>
             </div>
 
             <ProductOptions options={productOptions} />

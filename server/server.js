@@ -1,14 +1,16 @@
-const express = require('express'),
-    path = require('path'),
-    cors = require('cors'),
-    { Products } = require('./db'),
-    app = express(),
-    port = 3002;
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
+const compression = require('compression');
+const { Products } = require('./db');
+const app = express();
+const port = 3002;
 
 // Middleware
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(compression());
 app.use(express.static(path.join(__dirname + '/../dist')));
 
 app.get('/api/listing/:listing_id', (req, res) => {
