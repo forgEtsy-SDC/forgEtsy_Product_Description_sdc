@@ -27,7 +27,7 @@ export default function BuyBox({ title, price, shopName, shopStars, productOptio
                 </p>
             </div>
 
-            {productOptions ? <ProductOptions options={productOptions} /> : null}
+            <ProductOptions options={productOptions} />
 
             <div className={Style.button_region}>
                 <form className={Style.button_region}>
